@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="../js/echarts.min.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+      legend: {},
+      tooltip: {},
+      dataset: {
+        source: [
+          // ['title',"2006~2015年的GDP数据",]
+          ['2006', 217657, 219438],
+          ['2007', 268019, 270232],
+          ['2008', 316752, 319516],
+          ['2009', 345629, 349081],
+          ['2010', 408903, 413030],
+          ['2011', 484124, 489301],
+          ['2012', 534123, 540367],
+          ['2013', 588019, 595244],
+          ['2014', 635912, 643974],
+          ['2015', 676708, 685506],
+
+        ]
+      },
+
+      title: {
+        text: '2006~2015年的GDP数据',   //主标题
+        left: 'center',
+        textStyle: {         //样式
+          fontSize: 32
+        }
+      },
+      xAxis: { type: 'category' },
+      yAxis: {},
+      // Declare several bar series, each will be mapped
+      // to a column of dataset.source by default.
+      series: [{ type: 'bar' }, { type: 'bar' }]
+    };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+
+</html>

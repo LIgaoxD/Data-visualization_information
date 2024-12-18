@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<!-- 2. 创建一个包含图标的div元素 -->
+	<div id="chart" style="width:600px; height:600px;">
+	</div>
+	<!-- 3.准备数据 -->
+	<script>
+		// 6.改进横纵,重新定义数据结构
+		// var wins = [[[2006, 13], [2007, 11], [2008, 15], [2009, 15], [2010, 18], [2011, 21], [2012, 28]]];
+		
+		// var wins = [[[0, 13], [1, 11], [2, 15], [3, 15], [4, 18], [5, 21], [6, 28]]];
+		// var years = [
+		// 	[0, 2006], [1, 2007], [2, 2008], [3, 2009], [4, 2010], [5, 2011], [6, 2012]
+		// ];
+
+		var wins = [[[0, 13], [1, 11], [2, 15], [3, 15], [4, 18], [5, 21], [6, 28]]];
+		var wins2=[[[0,28]],[[1,28]],[[2,21]],[[3,20]],[[4,19]]];
+		var teams=[
+			[0,"MCI"],
+			[1,"MUN"],
+			[2,"ARS"],
+			[3,"IOT"],
+			[4,"NEW"]
+		];
+
+		// 4.绘图
+		window.onload = function () {
+
+			Flotr.draw(document.getElementById("chart"),
+			wins2, 
+			{
+				// 7.调整样式
+				title:"Premier League Wins",
+				colors:["#89AFD2","#1D1D1D","#df021d","#0e204b","#e67840"],
+				bars: {
+					show: true,
+					barWidth: 0.5,	//柱体宽度占用默认的一半
+					shadowSize:0,
+					fillOpacity:1,
+					lineWidth:0
+				},
+				// 5.改进纵轴	
+				yaxis: {
+					min: 0,
+					tickDecimals: 0
+				},
+				// 6.改进横纵
+				xaxis: {
+					ticks: teams
+				},
+				grid:{
+					horizontalLines:false,
+					verticalLines:false
+				}
+			});
+
+		};
+
+	</script>
+	<!-- 1. 引入flotr2库 -->
+	<script src="../js/flotr2.min.js" type=""></script>
+</body>
+
+</html>

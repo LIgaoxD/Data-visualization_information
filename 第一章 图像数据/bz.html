@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="chart" style="width:800px; height:600px;">
+		<script>
+
+			var data = [
+				{ data: [[0, 19]], label: "2022贫困人口" },		//2.73亿人
+				{ data: [[1, 81]] }
+			];
+			window.onload = function () {
+				Flotr.draw(
+					document.getElementById("chart"),
+					data, {
+					title: "2022中国6.85标准贫困人口占比!",
+					pie: {
+						show: true
+					},
+					yaxis: {
+						showLabels: false
+					},
+					grid: {
+						horizontalLines: false,
+						veticalLines: false
+					}
+				});
+			};
+		</script>
+		<script src="../js/flotr2.min.js"></script>
+</body>
+
+</html>
