@@ -81,9 +81,7 @@
 
 2. **创建 Canvas 元素**：HTML 中的 `<canvas>` 用于绘制图表。
 
-3. JavaScript 部分
-
-   ：
+3. JavaScript 部分  ：
 
    - 使用 `getElementById` 选择画布。
    - 初始化 Chart 对象，定义 `type`、`data` 和 `options`。
