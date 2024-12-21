@@ -1,4 +1,4 @@
-## 一个基于 JavaScript 库（如 D3.js 或 Chart.js）生成 HTML 数据可视化的基础教程
+## 一个基于 JavaScript 库（如 D3.js 或 Chart.js）生成 HTML 数据可视化的基础教程!
 (如果你是初学者，可以从简单的 Chart.js 入手，因为它对新手友好且易于实现)
 
 ------
