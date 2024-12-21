@@ -166,9 +166,7 @@
 
 2. **定义 SVG 容器**：使用 `<svg>` 元素作为图表的绘制区域。
 
-3. JavaScript 部分
-
-   ：
+3. JavaScript 部分   ：
 
    - 使用 D3.js 的 `scaleBand` 和 `scaleLinear` 定义比例尺。
    - 创建并添加柱状图 (`rect` 元素)。
